@@ -20,4 +20,4 @@ struct entry
     int token;
 };
 
-struct entry tab_simb[];
+struct entry tab_simb[100];

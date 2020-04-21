@@ -1,3 +1,4 @@
+#include <string.h>
 #include "global.h"
 #define STRMAX 999
 #define SYMMAX 100
@@ -20,7 +21,7 @@ int insert(s, tok)char s[];int tok;{
     len = strlen(s);
     if(lastentry + 1 >= SYMMAX)
         erro("tabela de símbolos está cheia");
-    if(lastentry + len + 1 >= STRMAX)
+    if(lastchar + len + 1 >= STRMAX)
         erro("array de lexemas está cheio");
     lastentry = lastentry + 1;
     tab_simb[lastentry].token = tok;

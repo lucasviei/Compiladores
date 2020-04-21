@@ -4,6 +4,7 @@
 char lexbuf[BSIZE];
 int clinha = 1;
 int tokenval = NONE;
+
 int lexan(){
     int t;
     while (1)
@@ -34,7 +35,7 @@ int lexan(){
             if (p == 0)
                 p = insert(lexbuf, ID);
             tokenval = p;
-            return tab_simb[b].token;            
+            return tab_simb[p].token;            
         }
         else if(t == EOF)
             return DONE;

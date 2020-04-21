@@ -1,6 +1,6 @@
 #include "global.h"
 
-emitir(t, tval)int t,tval;{
+void emitir(t, tval)int t,tval;{
     switch (t)
     {
     case '+':

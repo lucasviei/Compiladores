@@ -2,15 +2,15 @@
 
 struct entry palavras_chave[] = {
     "div", DIV,
-    "mod", MOD,
+    "mod",MOD,
     0, 0 
 };
 
-init(){
+void init(){
     struct entry *p;
     for (p = palavras_chave; p -> token; p++)
     {
-        insert(p -> lexptr,p -> token);
+        insert(p->lexptr,p->token);
     }
     
 }

@@ -1,7 +1,8 @@
 #include "global.h"
+
 int lookahead;
 
-parse(){
+void parse(){
     lookahead = lexan();
     while (lookahead != DONE)
     {
@@ -11,7 +12,7 @@ parse(){
     
 }
 
-expr(){
+void expr(){
     int t;
     termo();
     while (1)
@@ -32,7 +33,7 @@ expr(){
     
 }
 
-termo(){
+void termo(){
     int t;
     fator();
     while (1)
@@ -55,7 +56,7 @@ termo(){
     
 }
 
-fator(){
+void fator(){
     switch (lookahead)
     {
     case '(':
@@ -76,8 +77,8 @@ fator(){
     }
 }
 
-reconhecer(t)int t;{
+void reconhecer(t)int t;{
     if (lookahead == t)
         lookahead = lexan();
-    else erro("erro de sintaxe");
+    else erro("erro de sintaxe2");
 }
