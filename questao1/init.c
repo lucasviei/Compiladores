@@ -2,8 +2,8 @@
 
 struct entry palavras_chave[] = {
     "div", DIV,
-    "mod",MOD,
-    0, 0 
+    "mod", MOD,
+    "0", 0
 };
 
 void init(){
@@ -12,6 +12,5 @@ void init(){
     {
         insert(p->lexptr,p->token);
     }
-    
 }
 

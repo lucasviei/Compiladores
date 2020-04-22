@@ -35,7 +35,7 @@ int lexan(){
             if (p == 0)
                 p = insert(lexbuf, ID);
             tokenval = p;
-            return tab_simb[p].token;            
+            return tab_simb[p].token;         
         }
         else if(t == EOF)
             return DONE;
