@@ -1,8 +1,14 @@
 #include "global.h"
 
 struct entry palavras_chave[] = {
-    "div", DIV,
-    "mod", MOD,
+    "div",  DIV,
+    "mod",  MOD,
+    "if",   IF,
+    "then", THEN,
+    "while",WHILE,
+    "do",   DO,      
+    "begin",BEGIN,   
+    "end",  END,     
     "0", 0
 };
 

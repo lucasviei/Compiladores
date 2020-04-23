@@ -74,14 +74,15 @@ void fator(){
         break;
     default:
         if(lookahead != ';'){
-            printf("erro %c\n",lookahead);
-            //lookahead++;
+            if(lookahead == DIV){
+                printf("erro: 'DIV'\n");
+            }else if(lookahead == MOD){
+                printf("erro: 'MOD'\n");
+            }else{
+                printf("erro: '%c'\n",lookahead);
+            }
             clinha++;
-            //lookahead = lexan();
-        }else{
-            //erro("erro de sintaxe");
         }
-        
     }
 }
 
@@ -89,8 +90,7 @@ void reconhecer(t)int t;{
     if (lookahead == t)
         lookahead = lexan();
     else if(lookahead != ';'){
-        printf("erro2 %c\n",lookahead);
-        lookahead++;
+        printf("erro2: '%c'\n",lookahead);
         clinha++;
         lookahead = lexan();
     }

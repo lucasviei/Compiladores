@@ -11,6 +11,13 @@
 #define ID      259
 #define DONE    260
 
+#define IF      261
+#define THEN    262
+#define WHILE   263
+#define DO      264
+#define BEGIN   265
+#define END     266
+
 int tokenval;
 int clinha;
 

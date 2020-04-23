@@ -72,9 +72,65 @@ void fator(){
         emitir(ID, tokenval);
         reconhecer(ID);
         break;
+    case IF:
+        emitir(IF, tokenval);
+        reconhecer(IF);
+    case THEN:
+        emitir(IF, tokenval);
+        reconhecer(IF);
+        break;
+    case WHILE:
+        emitir(IF, tokenval);
+        reconhecer(IF);   
+    case DO:
+        emitir(IF, tokenval);
+        reconhecer(IF);
+        break;
+    case BEGIN:
+        emitir(IF, tokenval);
+        reconhecer(IF);
+    case END:
+        emitir(IF, tokenval);
+        reconhecer(IF);
+        break;
     default:
         erro("erro de sintaxe");
     }
+}
+
+void cmd(){
+    switch (lookahead)
+    {
+    case ID:
+        expr();
+        break;
+    case IF:
+        expr();
+    case THEN:
+        cmd();
+        break;
+    case WHILE:
+        expr();    
+    case DO:
+        cmd();
+        break;
+    case BEGIN:
+        opt_cmd();
+    case END:
+        break;
+    default:
+        break;
+    }
+}
+
+void opt_cmd(){
+   if(lookahead != NULL){
+       cmd_list();
+   }
+}
+
+void cmd_list(){
+    cmd();
 }
 
 void reconhecer(t)int t;{

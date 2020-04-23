@@ -27,7 +27,5 @@ int insert(s, tok)char *s;int tok;{
     lastentry = lastentry + 1;
     tab_simb[lastentry].token = tok;
     tab_simb[lastentry].lexptr = s;
-    //tab_simb[lastentry].lexptr = &lexemas[lastchar+1];
-    //strcpy(tab_simb[lastentry].lexptr, s);
     return lastentry;
 }

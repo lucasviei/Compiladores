@@ -21,6 +21,21 @@ void emitir(t, tval)int t,tval;{
     case ID:
         printf("%s\n", tab_simb[tval].lexptr);
         break;
+    case IF:
+        printf("%s\n", tab_simb[tval].lexptr);
+        break;
+    case WHILE:
+        printf("%s\n", tab_simb[tval].lexptr);
+        break;
+    case DO:
+        printf("%s\n", tab_simb[tval].lexptr);
+        break;
+    case BEGIN:
+        printf("%s\n", tab_simb[tval].lexptr);
+        break;
+    case END:
+        printf("%s\n", tab_simb[tval].lexptr);
+        break;
     default:
         printf("token %d, tokeval %d\n", t, tval);
     }
