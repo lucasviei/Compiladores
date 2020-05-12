@@ -1,2 +1,2 @@
 # Compiladores
- Trabalho final da cadeira da disciplina.
+ Trabalho final da disciplina.
